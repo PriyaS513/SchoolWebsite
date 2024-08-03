@@ -1,7 +1,7 @@
 [build]
   base = "/"
   publish = "build" # Change this to your build output directory
-  command = "npm install --force --legacy-peer-deps && npm run build"
+  command = "npm install --force"
 
 [build.environment]
   NODE_VERSION = "18.20.4"
