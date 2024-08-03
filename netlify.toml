@@ -1,7 +1,6 @@
 [build]
-  base = "/"
-  publish = "build" # Change this to your build output directory
-  command = "npm install --force"
+  command = "npm install --legacy-peer-deps && npm run build"
+  publish = "build"
 
-[build.environment]
+[context.production.environment]
   NODE_VERSION = "18.20.4"
