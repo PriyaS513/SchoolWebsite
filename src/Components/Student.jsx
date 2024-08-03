@@ -41,20 +41,32 @@ const Student = () => {
 
     setErrors(validationErrors);
 
-    // If there are no validation errors, navigate to /Studentprofile page
+    // If there are no validation errors, check if the credentials match
     if (Object.keys(validationErrors).length === 0) {
-      toast.success('Logged In Successfully!', {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-      setTimeout(() => {
-        navigate("/Studentprofile");
-      }, 2000);
+      if (formData.username === 'S513@pahmv.com' && formData.password === 'Pass@123') {
+        toast.success('Logged In Successfully!', {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        setTimeout(() => {
+          navigate("/Studentprofile");
+        }, 2000);
+      } else {
+        toast.error('Invalid username or password!', {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
     } else {
       toast.error('Invalid username or password!', {
         position: "top-right",
