@@ -1,0 +1,187 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #Addstud {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 8px;
+  }
+  
+  .heading {
+    text-align: center;
+    color: #2f61ac;
+    margin-bottom: 20px;
+  }
+  
+  .card-body {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .card-body img {
+    border: 2px solid #dee2e6;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .card-body .btn {
+    margin-right: 10px;
+  }
+  
+  .card-body .text-light {
+    color: #2f61ac;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group input {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+  }
+  
+  .form-group input::placeholder {
+    color: #adb5bd;
+  }
+  
+  .form-group input:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+  }
+  
+  .form-group div[style*="color: red"] {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 5px;
+  }
+  
+  .gen {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .gen h1 {
+    font-size: 1.5rem;
+    color: #343a40;
+    margin-bottom: 20px;
+  }
+  
+  .gen div {
+    display: inline-block;
+  }
+  
+  .save {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .save .btn {
+    width: 100px;
+  }
+  
+  .save .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .save .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+  }
+  
+  .save .btn-default {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #fff;
+  }
+  
+  .save .btn-default:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  @media (max-width: 768px) {
+    .col-md-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .save {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .save .btn {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
+  #QRCode {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  input[type="tel"] {
+    width: 50%;
+  }
+  
+  input[type="button"] {
+    display: block;
+    margin: 10px auto;
+  }
+  
+  @media (max-width: 992px) {
+    .row .col-md-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  
+  @media (min-width: 993px) {
+    .card-body {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .form-group {
+      width: 45%;
+    }
+  
+    .form-group input {
+      width: 100%;
+    }
+  }
+  
