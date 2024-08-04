@@ -1,13 +1,14 @@
 import React, { useState, useRef } from 'react';
 import axios from "axios";
 import '../Components/Studprofile.css';
+import './TimeTable.css';
 import img from '../Images/TimeTable.jpeg';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css';
-
+import imgLogo from '../Images/student1.jpeg';
 function StudentTimeTable() {
   const [image, setImage] = useState(null);
 
@@ -134,12 +135,14 @@ const handleInputChange = (event) => {
     }
     resetFormPhoto();
   };
-        const fileInputRef = useRef(null);
-        const boxSize = 500; 
+
+  const fileInputRef = useRef(null);
+  const boxSize = 500; 
         const resetFormPhoto = () => {
           setImage(null); // reset the image state variable to null
           fileInputRef.current.value = null;
         };
+
   return (
     <div id="SelfTT" className="containerTT" onClick={handleOutsideClick}>
       <div className="student-info-container">
@@ -151,7 +154,7 @@ const handleInputChange = (event) => {
         </div>
         <div className="student-photo-container">
         <img
-              src={img}
+              src={imgLogo}
               alt="Student"
               className="student-photo"
               onClick={handlePhotoClick}
@@ -182,36 +185,41 @@ const handleInputChange = (event) => {
         </button>
       </div>
       <h2 className="text-center mb-4">Upload Self Time Table</h2>
-      <form onSubmit={handleSubmit} action="" method="post" id="self-tt">
-      <div className="form-group d-flex align-items-center">
-  <label htmlFor="file-input" className="btn btn-outline-primary mr-2">
-    Upload new photo
-    <input type="file" className="account-settings-fileinput" id='file-input' name='image' onChange={handleInputChangePhoto} ref={fileInputRef} accept="image/*" aria-label="Upload new photo" required />
-  </label>
-  <button type="button" className="btn btn-default md-btn-flat" onClick={resetFormPhoto}>
-    Reset
+      <form onSubmit={handleSubmit} id="self-tt" className="form-container">
+  <div className="form-group d-flex flex-column align-items-center">
+    <label htmlFor="file-input" className="btn btn-outline-primary upload-button">
+      Upload new photo
+      <input
+        type="file"
+        className="account-settings-fileinput"
+        id="file-input"
+        name="image"
+        onChange={handleInputChangePhoto}
+        ref={fileInputRef}
+        accept="image/*"
+        aria-label="Upload new photo"
+        required
+      />
+    </label>
+    <button type="button" className="btn btn-default reset-button" onClick={resetFormPhoto}>
+      Reset
+    </button>
+  </div>
+  <div className="text-light small mt-1 allowed-types">
+    Allowed JPG, GIF or PNG. Max size of 800K
+  </div>
+  <div className="image-preview">
+    <img
+      src={image || img}
+      alt="preview"
+      className="preview-image"
+    />
+  </div>
+  <button type="submit" className="btn btn-primary submit-button mt-4">
+    Upload
   </button>
-</div>
-        <div className="text-light small mt-1">
-          Allowed JPG, GIF or PNG. Max size of 800K
-        </div>
-        <div className="image-preview">
-        <img
-          src={image || img}
-          alt="photo"
-          className="d-block ui-w-80"
-          style={{
-            width: `${boxSize}px`,
-            height: `${boxSize}px`,
-            objectFit: 'cover',
-            borderRadius: '10%',
-          }}
-        />
-        </div>
-          <button type="submit" className="btn btn-primary mt-4">
-            Upload
-          </button>
-      </form>
+</form>
+
     </div>
     <ToastContainer />
   </div>

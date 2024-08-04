@@ -81,9 +81,9 @@ const StudentInfo = () => {
           <div className="card3">
             <div className="box add-notice">
               <div className="content">
-                <i className="fas fa-bullhorn"></i>
+              <i className="fas fa-trophy"></i>
                 <h3>Add Achivements</h3>
-                <p>Add a new notice.</p>
+                <p>Add a new achivements.</p>
                 <a onClick={() => navigate('/Teacherprofile/Achivementpage/AddAchivements')}>Add Achivements</a>
               </div>
             </div>
@@ -94,7 +94,7 @@ const StudentInfo = () => {
               <div className="content">
                 <i className="fas fa-list-alt"></i>
                 <h3>List of Achivement</h3>
-                <p>View the list of all notices.</p>
+                <p>View the list of all achivements.</p>
                 <a onClick={() => navigate('/Teacherprofile/Achivementpage/AchivementsList')}>View List</a>
               </div>
             </div>

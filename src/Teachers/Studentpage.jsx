@@ -81,7 +81,7 @@ const StudentInfo = () => {
             <div className="content">
               <i className="fas fa-calendar-check"></i>
               <h3>Add Student</h3>
-              <p>Add attendance details.</p>
+              <p>Add student details.</p>
               <a onClick={() => navigate('/Teacherprofile/Studentpage/AddStudent')}  >Add Student</a>
             </div>
           </div>

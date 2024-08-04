@@ -79,9 +79,9 @@ const StudentInfo = () => {
           <div className="card3">
             <div className="box add-notice">
               <div className="content">
-                <i className="fas fa-bullhorn"></i>
+              <i className="fas fa-calendar-alt"></i>
                 <h3>Time Table</h3>
-                <p>Add a new notice.</p>
+                <p>View My Time Table.</p>
                 <a onClick={() => navigate('/Teacherprofile/TimeTablepage/TimeTable')}>My Time Table</a>
               </div>
             </div>
@@ -90,10 +90,10 @@ const StudentInfo = () => {
           <div className="card3">
             <div className="box list-notice">
               <div className="content">
-                <i className="fas fa-list-alt"></i>
+              <i className="fas fa-calendar-alt"></i>
                 <h3>Add Self Time table</h3>
-                <p>View the list of all notices.</p>
-                <a onClick={() => navigate('/Teacherprofile/TimeTablepage/CreateTeacherTimeTable')}>View List</a>
+                <p>Add My Time Table.</p>
+                <a onClick={() => navigate('/Teacherprofile/TimeTablepage/CreateTeacherTimeTable')}>Upload</a>
               </div>
             </div>
           </div>
@@ -101,10 +101,10 @@ const StudentInfo = () => {
           <div className="card3">
             <div className="box list-notice">
               <div className="content">
-                <i className="fas fa-list-alt"></i>
+              <i className="fas fa-calendar-alt"></i>
                 <h3>Add Student Time table</h3>
-                <p>View the list of all notices.</p>
-                <a onClick={() => navigate('/Teacherprofile/TimeTablepage/CreateStudentTimeTable')}>View List</a>
+                <p>Add Students Time Table.</p>
+                <a onClick={() => navigate('/Teacherprofile/TimeTablepage/CreateStudentTimeTable')}>Upload</a>
               </div>
             </div>
           </div>

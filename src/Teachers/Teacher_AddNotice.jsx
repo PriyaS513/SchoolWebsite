@@ -143,7 +143,7 @@ function AddNotice() {
           <div className="student-details">
             <h2 className="student-name">John Doe</h2>
             <p className="student-reg-no">Reg No: 123456789</p>
-            <p className="student-reg-no">Post</p>
+            <p className="student-reg-no">Teacher</p>
           </div>
           <div className="student-photo-container">
             <img
@@ -229,7 +229,7 @@ function AddNotice() {
             )}
           </div>
           <div className="submit-container3 hover-effect">
-            <button type="submit" className="submit3">Submit</button>
+            <button type="submit" className="btn btn-primary">Submit</button>
           </div>
         </form>
       </div>
