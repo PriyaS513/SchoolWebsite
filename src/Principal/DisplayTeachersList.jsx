@@ -39,21 +39,21 @@ function createData(regid, email, name, sclass) {
 }
 
 const rows = [
-  createData('S0121212', '34', 'AAAA', 3),
-  createData('S0121212', '43', 'AAAA', 9),
-  createData('S0121212', '35', 'AAAA', 3),
-  createData('S0121212', '23', 'AAAA', 2),
-  createData('S0121212', '65', 'AAAA', 3),
-  createData('S0121212', '54', 'AAAA', 2),
-  createData('S0121212', '45', 'AAAA', 2),
-  createData('S0121212', '55', 'AAAA', 2),
-  createData('S0121212', '55', 'AAAA', 2),
-  createData('S0121212', '55', 'AAAA', 2),
-  createData('S0121212', '55', 'AAAA', 2),
-  createData('S0121212', '55', 'AAAA', 2),
-  createData('S0121212', '55', 'AAAA', 2),
-  createData('S0121212', '93', 'AAAA', 2),
-  createData('S0121212', '1', 'AAAA', 2),
+  createData('S0121212', 'a@gmail.com', 'AAAA', 3),
+  createData('S0121212', 'a@gmail.com', 'AAAA', 9),
+  createData('S0121212', 'a@gmail.com', 'AAAA', 3),
+  createData('S0121212', 'a@gmail.com', 'AAAA', 2),
+  createData('S0121212', 'a@gmail.com', 'AAAA', 3),
+  createData('S0121212', 'a@gmail.com', 'AAAA', 2),
+  createData('S0121212', 'a@gmail.com', 'AAAA', 2),
+  createData('S0121212', 'a@gmail.com', 'AAAA', 2),
+  createData('S0121212', 'a@gmail.com', 'AAAA', 2),
+  createData('S0121212', 'a@gmail.com', 'AAAA', 2),
+  createData('S0121212', 'a@gmail.com', 'AAAA', 2),
+  createData('S0121212', 'a@gmail.com', 'AAAA', 2),
+  createData('S0121212', 'a@gmail.com', 'AAAA', 2),
+  createData('S0121212', 'a@gmail.com', 'AAAA', 2),
+  createData('S0121212', 'a@gmail.com', 'AAAA', 2),
 ];
  function StickyHeadTable() {
   const navigate = useNavigate();

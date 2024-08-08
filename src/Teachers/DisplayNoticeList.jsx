@@ -41,22 +41,22 @@ function createData(id, noticeTitle, noticeContent, noticeDate) {
 }
 
 const rows = [
-  createData('S0121212', 'A', 'AAAA', 3/3/23),
-  createData('S0121212', 'B', 'AAAA', 9/3/23),
-  createData('S0121212', 'C', 'AAAA', 3/3/23),
-  createData('S0121212', 'D', 'AAAA', 2/2/24),
-  createData('S0121212', 'E', 'AAAA', 3/4/24),
-  createData('S0121212', 'F', 'AAAA', 2/2/24),
-  createData('S0121212', 'G', 'AAAA', 2/2/24),
-  createData('S0121212', 'H', 'AAAA', 2/2/24),
-  createData('S0121212', 'I', 'AAAA', 2/2/24),
-  createData('S0121212', 'J', 'AAAA', 2/2/24),
-  createData('S0121212', 'K', 'AAAA', 2/2/24),
-  createData('S0121212', 'L', 'AAAA', 2/2/24),
-  createData('S0121212', 'M', 'AAAA', 2/2/24),
-  createData('S0121212', 'N', 'AAAA', 2/2/24),
-  createData('S0121212', 'O', 'AAAA', 2/4/24),
-  createData('S0121212', 'P', 'AAAA', 2/4/24),
+  createData('S0121212', 'A', 'AAAA', '3/3/23'),
+  createData('S0121212', 'B', 'AAAA', '9/3/23'),
+  createData('S0121212', 'C', 'AAAA', '3/3/23'),
+  createData('S0121212', 'D', 'AAAA', '2/2/24'),
+  createData('S0121212', 'E', 'AAAA', '3/4/24'),
+  createData('S0121212', 'F', 'AAAA', '2/2/24'),
+  createData('S0121212', 'G', 'AAAA', '2/2/24'),
+  createData('S0121212', 'H', 'AAAA', '2/2/24'),
+  createData('S0121212', 'I', 'AAAA', '2/2/24'),
+  createData('S0121212', 'J', 'AAAA', '2/2/24'),
+  createData('S0121212', 'K', 'AAAA', '2/2/24'),
+  createData('S0121212', 'L', 'AAAA', '2/2/24'),
+  createData('S0121212', 'M', 'AAAA', '2/2/24'),
+  createData('S0121212', 'N', 'AAAA', '2/2/24'),
+  createData('S0121212', 'O', 'AAAA', '2/4/24'),
+  createData('S0121212', 'P', 'AAAA', '2/4/24'),
 ];
  function StickyHeadTable() {
   const navigate = useNavigate();

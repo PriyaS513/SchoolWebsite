@@ -1,11 +1,28 @@
 
 
-#Addstud, #AddTeacher {
+#Addstud {
   max-width: 100%;
   margin: 0 auto;
   padding: 16px;
 }
-
+#EditStud
+{
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+}
+#AddTeacher
+{
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+}
+#EditTeac
+{
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+}
 .heading-teac {
   text-align: center;
   color: #2f61ac;

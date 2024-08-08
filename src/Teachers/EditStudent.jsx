@@ -23,10 +23,7 @@ const EditStudent = () => {
   const [errors, setErrors] = useState({});
   const [image, setImage] = useState('');
 
-  const [inputValue, setInputValue] = useState({
-    mobile: "",
-    studentId: "",
-  });
+  const [inputValue, setInputValue] = useState("");
 
   const handleInputChangeName = (event) => {
     setName(event.target.value);
@@ -368,7 +365,7 @@ const EditStudent = () => {
           <div className="form-row">
           <div className="form-group col-md-4">
           
-            <label>Name:</label>
+            <label>Name</label>
             <input
               type="text"
               className="form-control mb-1"
@@ -383,7 +380,7 @@ const EditStudent = () => {
           
             </div>
             <div className=" form-group col-md-4">
-            <label>Class:</label>
+            <label>Class</label>
             <input
               type="text"
               value={sclass}
@@ -402,7 +399,7 @@ const EditStudent = () => {
           
 
           <div className="form-group col-md-4">
-            <label>Registration ID:</label>
+            <label>Registration ID</label>
             <input
               type="text"
               className="form-control mb-1"
@@ -421,7 +418,7 @@ const EditStudent = () => {
         <div className="form-row">
             <div className="form-group col-md-4">
           
-            <label>Roll No:</label>
+            <label>Roll No</label>
             <input
               type="text"
               className="form-control mb-1"
@@ -441,7 +438,7 @@ const EditStudent = () => {
           
           <div className="form-group col-md-4">
           
-            <label>Address:</label>
+            <label>Address</label>
             <input
               type="text"
               className="form-control"
@@ -457,7 +454,7 @@ const EditStudent = () => {
       
           <div className="form-group col-md-4">
           
-            <label>Father's Name:</label>
+            <label>Father's Name</label>
             <input
               type="text"
               className="form-control mb-1"
@@ -478,7 +475,7 @@ const EditStudent = () => {
           <div className="form-row">
           <div className="form-group col-md-4">
         
-            <label>Mother's Name:</label>
+            <label>Mother's Name</label>
             <input
               type="text"
               className="form-control mb-1"
@@ -498,7 +495,7 @@ const EditStudent = () => {
          
           <div className="form-group col-md-4">
           
-            <label>Mobile No:</label>
+            <label>Mobile No</label>
             <input
               type="tel"
               className="form-control mb-1"
@@ -518,7 +515,7 @@ const EditStudent = () => {
           
             <div className="form-group col-md-4">
           
-          <label>Aadhar No:</label>
+          <label>Aadhar No</label>
           <input
             type="text"
             className="form-control mb-1"
@@ -538,7 +535,7 @@ const EditStudent = () => {
          <div className="form-row">
             <div className="form-group col-md-6">
           
-            <label>Password:</label>
+            <label>Password</label>
             <input
               type="password"
               className="form-control mb-1"
@@ -556,7 +553,7 @@ const EditStudent = () => {
             
             <div className="form-group col-md-6">
          
-            <label>Confirm Password:</label>
+            <label>Confirm Password</label>
             <input
               type="password"
               className="form-control mb-1"

@@ -30,10 +30,8 @@ function AddStudent() {
     if (!e.target.closest('.student-photo-container')) setShowDropdown(false);
   };
 
-  const [inputValue, setInputValue] = useState({
-    mobile: "",
-    studentId: "",
-  });
+  const [inputValue, setInputValue] = useState("");
+
 
   const download = () => {
     const svg = document.getElementById("QRCode");
@@ -508,8 +506,8 @@ function AddStudent() {
               <input
                 type="text"
                 name="qrcode"
-                value={inputValue}
                 placeholder="Enter Mobile Number-Student ID"
+                value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
               />
             </div>

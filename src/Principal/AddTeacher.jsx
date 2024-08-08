@@ -289,6 +289,7 @@ const resetForm = () => {
 
         <div className="form-row">
           <div className="form-group col-md-6">
+          <label>Name</label>
             <input
               type="text"
               className="form-control mb-1"
@@ -302,6 +303,7 @@ const resetForm = () => {
                         {errors.name && <div style={{ color: "red" }}>{errors.name}</div>}
           </div>
           <div className="form-group col-md-6">
+          <label>Registration Id</label>
             <input
               type="text"
               className="form-control"
@@ -317,6 +319,7 @@ const resetForm = () => {
           </div>
           <div className="form-row">
           <div className="form-group col-md-6">
+          <label>Email Id</label>
             <input
               type="email"
               className="form-control mb-1"
@@ -330,6 +333,7 @@ const resetForm = () => {
             {errors.email && <div style={{ color: "red" }}>{errors.email}</div>}
           </div>
           <div className="form-group col-md-6">
+          <label>Mobile No</label>
             <input
               type="tel"
               className="form-control"
@@ -345,6 +349,7 @@ const resetForm = () => {
           </div>
           <div className="form-row">
           <div className="form-group col-md-6">
+          <label>Education</label>
             <input
               type="text"
               className="form-control mb-1"
@@ -358,6 +363,7 @@ const resetForm = () => {
             {errors.education && <div style={{ color: "red" }}>{errors.education}</div>}
           </div>
           <div className="form-group col-md-6">
+          <label>Post</label>
             <input
               type="text"
               className="form-control"
@@ -373,6 +379,7 @@ const resetForm = () => {
           </div>
           <div className="form-row">
           <div className="form-group col-md-6">
+          <label>Enter Password</label>
             <input
               type="password"
               className="form-control mb-1"
@@ -386,6 +393,7 @@ const resetForm = () => {
             {errors.passw && <div style={{ color: "red" }}>{errors.passw}</div>}
           </div>
           <div className="form-group col-md-6">
+          <label>Confirm Password</label>
             <input
               type="password"
               className="form-control"

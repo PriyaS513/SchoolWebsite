@@ -253,7 +253,7 @@ const handleSubmit = async (event) => {
     }
   };
   return (
-    <div id="EditStud" onClick={handleOutsideClick}>
+    <div id="EditTeac" onClick={handleOutsideClick}>
         <div className="student-info-container">
         <div className="student-navbar">
           <div className="student-details">
@@ -340,7 +340,7 @@ const handleSubmit = async (event) => {
           <div className="row">
           <div className="col-md-6">
           <div className="form-group">
-            <label>Name:</label>
+            <label>Name</label>
             <input
               type="text"
               className="form-control mb-1"
@@ -356,7 +356,7 @@ const handleSubmit = async (event) => {
             </div>
             <div className="col-md-6">
           <div className="form-group">
-            <label>Registration Id:</label>
+            <label>Registration Id</label>
             <input
               type="text"
               value={regid}
@@ -376,7 +376,7 @@ const handleSubmit = async (event) => {
           <div className="row">
           <div className="col-md-6">
           <div className="form-group">
-            <label>Email ID:</label>
+            <label>Email Id</label>
             <input
               type="email"
               className="form-control mb-1"
@@ -394,7 +394,7 @@ const handleSubmit = async (event) => {
             </div>
             <div className="col-md-6">
           <div className="form-group">
-          <label>Mobile No:</label>
+          <label>Mobile No</label>
             <input
               type="tel"
               className="form-control mb-1"
@@ -414,7 +414,7 @@ const handleSubmit = async (event) => {
           <div className="row">
           <div className="col-md-6">
           <div className="form-group">
-            <label>Education:</label>
+            <label>Education</label>
             <input
               type="text"
               className="form-control"
@@ -430,7 +430,7 @@ const handleSubmit = async (event) => {
           </div>
           <div className="col-md-6">
           <div className="form-group">
-            <label>Post:</label>
+            <label>Post</label>
             <input
               type="text"
               className="form-control mb-1"
@@ -450,7 +450,7 @@ const handleSubmit = async (event) => {
           <div className="row">
           <div className="col-md-6">
           <div className="form-group">
-            <label>Enter Password:</label>
+            <label>Enter Password</label>
             <input
               type="password"
               className="form-control mb-1"
@@ -468,7 +468,7 @@ const handleSubmit = async (event) => {
           </div>
           <div className="col-md-6">
           <div className="form-group">
-            <label>Confirm Password:</label>
+            <label>Confirm Password</label>
             <input
               type="password"
               className="form-control mb-1"
