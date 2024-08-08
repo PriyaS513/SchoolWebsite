@@ -1,200 +1,124 @@
+/* Base styles for the navigation bar */
 nav {
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 1000;
-  height: 80px;
+  z-index: 1050; /* Set a higher z-index for the navbar */
+  height: 75px;
   width: 100%;
-  background-color: transparent; /* Make navbar transparent */
-  color: rgb(240, 240, 240);
-  padding: 2px 0;
+  background-color: transparent;
+  color: #f0f0f0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.navbar-toggle-icon {
-  color: white !important;
-  border: none;
-}
-
-
-
-
+/* Navbar logo */
 .logo {
   width: 75px;
-  height: 75px;
+  height: auto;
   padding: 2px;
 }
 
-nav ul {
+/* Styles for navigation links */
+.navbar-nav {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-nav ul li {
-  display: inline-block;
-  margin: 5px 20px;
-  font-size: 20px;
-  color: rgb(228, 228, 228);
-  font-weight: bold;
-}
-
-/* Ensure nav-item color is black */
-.nav-item {
-  color: rgb(253, 253, 253);
-  position: sticky;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-}
-
-/* Adjust nav-link color */
-.navbar-light .navbar-nav .nav-link {
-  color: rgb(255, 255, 255);
-}
-
-/* img {
-  width: 80px;
-  height: 80px;
-}
-.navbar{
-  position: sticky;
-  top: 0;
-}
-.navbar-nav {
-  font-size: 20px;
-  font-weight: 500;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  font-style: normal;
-  margin-right: 0px;
-  margin-left: 126px;
   justify-content: space-between;
   gap: 12px;
-  color: black;
 }
 
 .nav-item {
-  --bs-navbar-padding-x: 0;
-  --bs-navbar-padding-y: 0.5rem;
-  --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.65);
-  --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
-  --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
-  --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
-  --bs-navbar-brand-padding-y: 0.3125rem;
-  --bs-navbar-brand-margin-end: 1rem;
-  --bs-navbar-brand-font-size: 1.25rem;
-  --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
-  --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
-  --bs-navbar-nav-link-padding-x: 0.5rem;
-  --bs-navbar-toggler-padding-y: 0.25rem;
-  --bs-navbar-toggler-padding-x: 0.75rem;
-  --bs-navbar-toggler-font-size: 1.25rem;
-  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  --bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0.15);
-  --bs-navbar-toggler-border-radius: var(--bs-border-radius);
-  --bs-navbar-toggler-focus-width: 0.25rem;
-  --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
-}
-.navbar-brand {
-padding-top: var(--bs-navbar-brand-padding-y);
-padding-bottom: var(--bs-navbar-brand-padding-y);
-margin-right: var(--bs-navbar-brand-margin-end);
-font-size: var(--bs-navbar-brand-font-size);
-color: var(--bs-navbar-brand-color);
-text-decoration: none;
-black-space: nowrap;
-margin-left: 41px;
-}
-
-.carousel-caption {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-  top: 37%;
-  left: 0;
-  right: 0;
-}
-
-.carousel-caption span {
-  color: var(--bs-blue);
-}
-
-.carousel-caption h2 {
-  color: black;
-  font-size: 42px;
-  font-weight: 600;
-  width: 80%;
-  margin: 0px auto 10px auto;
-}
-
-.carousel-caption p {
+  margin: 5px 20px;
   font-size: 20px;
-  width: 80%;
-  margin: 0px auto 20px auto;
+  font-weight: bold;
+  color: #e4e4e4;
 }
-*/
-/* @media (max-width: 1000px) {
-  .carousel-caption h2 {
-      font-size: 38px;
-  }
-  .navbar-nav hr {
-    display: none;
-  }
-} */
-/* @media (max-width: 800px) {
+
+.nav-link {
+  color: #fff !important;
+}
+
+/* Overlay for the sidebar */
+.page-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1045; /* Set a higher z-index for the overlay */
+  display: none;
+}
+
+.page-overlay.show {
+  display: block;
+}
+
+.navbar-open {
+  background-color: #2f61ac !important;
+}
+
+/* Sidebar styles for mobile view */
+.navbar-toggler {
+  display: none;
+}
+
+@media (max-width: 768px) {
   nav {
-    background-color: #2f61ac;
+    height: 60px; /* Adjust height for mobile */
   }
-  
-} */
-@media only screen and (max-width: 360px) {
-  /* Your styles for medium mobile devices */
+  .logo {
+    width: 60px; /* Smaller width for mobile */
+    height: 60px; /* Maintain aspect ratio */
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
 
   .navbar-collapse {
-    transform: translateX(100%); /* Initially hidden off-screen */
     transition: transform 0.3s ease-in-out;
-    background-color: #fff; /* White background */
-    color: #000; /* Black text color */
+    background-color: #2f61ac;
+    color: white;
     position: fixed;
-    top: 75px; /* Adjust based on the height of the navbar */
-    right: 0;
-    height: calc(100% - 75px); /* Full height below navbar */
+    top: 75px;
+    left: 0;
+    height: calc(100% - 75px);
     width: 100%;
-    padding-top: 20px;
-    overflow-y: auto;
-    z-index: 1000;
+    z-index: 1050; /* Ensure navbar-collapse has a high z-index */
+    transform: translateX(100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
   }
+
   .navbar-collapse.show {
     transform: translateX(0);
   }
 
   .navbar-nav {
     flex-direction: column;
-  }
-
-
-  .navbar-toggler {
-    display: block; /* Display toggler button */
-  }
-
-  .navbar-nav {
     width: 100%;
+    text-align: center;
   }
 
   .nav-item {
-    text-align: center;
-    margin: 10px 0;
+    margin: 20px 0;
   }
+
+  body.navbar-open {
+    overflow: hidden; /* Prevents scrolling */
+  }
+}
+
+/* Remove the horizontal line below each button when clicked */
+.nav-item hr {
+  display: none;
 }

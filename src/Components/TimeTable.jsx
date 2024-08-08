@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import img from '../Images/student1.jpeg';
 import "./TimeTable.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-const Studentprofile = () => {
+
+const Studenttimetable = () => {
     const navigate = useNavigate();
     const [showDropdown, setShowDropdown] = useState(false);
 
@@ -78,6 +78,7 @@ const Studentprofile = () => {
       <div className="home-button-container">
         <button className="home-button" onClick={() => navigate('/Studentprofile')}>
         <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        Back
         </button>
       </div>
       </div>
@@ -179,4 +180,4 @@ const Studentprofile = () => {
   );
 };
 
-export default Studentprofile;
+export default Studenttimetable;

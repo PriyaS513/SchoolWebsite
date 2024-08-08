@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Notice.css";
+import "./Notice_add.css";
 import axios from "axios";
 import img from "../Images/student1.jpeg";
 import { useNavigate } from "react-router-dom";
@@ -178,7 +178,7 @@ function AddNotice() {
         </button>
       </div>
       <div className="container-notice">
-        <h2 className="text-center mb-4">Add Notices</h2>
+        <h2 className="text-center-notice mb-4">Add Notices</h2>
         <form
           onSubmit={handleFormSubmit}
           action="notice"

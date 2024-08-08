@@ -205,7 +205,7 @@ const handleInputChange = (event) => {
       Reset
     </button>
   </div>
-  <div className="text-light small mt-1 allowed-types">
+  <div className="small mt-1 allowed-types">
     Allowed JPG, GIF or PNG. Max size of 800K
   </div>
   <div className="image-preview">

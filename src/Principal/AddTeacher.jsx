@@ -240,6 +240,7 @@ const resetForm = () => {
         <i class="fa fa-arrow-left" aria-hidden="true"></i> Back
         </button>
       </div>
+      <h2 className="heading-teac">Add Teacher details</h2>
       <form
         onSubmit={handleSubmit}
         action="teacher"
@@ -280,14 +281,14 @@ const resetForm = () => {
             >
               Reset
             </button>
-            <div className="text-light small mt-1">
+            <div className="small mt-1">
               Allowed JPG,GIF or PNG. Max size of 800K
             </div>
           </div>
         </div>
 
-        <div className="">
-          <div className="form-group">
+        <div className="form-row">
+          <div className="form-group col-md-6">
             <input
               type="text"
               className="form-control mb-1"
@@ -298,9 +299,9 @@ const resetForm = () => {
               placeholder="Enter name"
               required
             />
-                        {errors.name && <p className="text-danger">{errors.name}</p>}
+                        {errors.name && <div style={{ color: "red" }}>{errors.name}</div>}
           </div>
-          <div className="form-group">
+          <div className="form-group col-md-6">
             <input
               type="text"
               className="form-control"
@@ -311,9 +312,11 @@ const resetForm = () => {
               placeholder="Enter Teacher Id"
               required
             />
-            {errors.regid && <p className="text-danger">{errors.regid}</p>}
+            {errors.regid && <div style={{ color: "red" }}>{errors.regid}</div>}
           </div>
-          <div className="form-group">
+          </div>
+          <div className="form-row">
+          <div className="form-group col-md-6">
             <input
               type="email"
               className="form-control mb-1"
@@ -324,9 +327,9 @@ const resetForm = () => {
               placeholder="Enter email"
               required
             />
-            {errors.email && <p className="text-danger">{errors.email}</p>}
+            {errors.email && <div style={{ color: "red" }}>{errors.email}</div>}
           </div>
-          <div className="form-group">
+          <div className="form-group col-md-6">
             <input
               type="tel"
               className="form-control"
@@ -337,9 +340,11 @@ const resetForm = () => {
               placeholder="Enter mobile number"
               required
             />
-            {errors.mobile && <p className="text-danger">{errors.mobile}</p>}
+            {errors.mobile && <div style={{ color: "red" }}>{errors.mobile}</div>}
           </div>
-          <div className="form-group">
+          </div>
+          <div className="form-row">
+          <div className="form-group col-md-6">
             <input
               type="text"
               className="form-control mb-1"
@@ -350,11 +355,9 @@ const resetForm = () => {
               placeholder="Enter education"
               required
             />
-            {errors.education && (
-              <p className="text-danger">{errors.education}</p>
-            )}
+            {errors.education && <div style={{ color: "red" }}>{errors.education}</div>}
           </div>
-          <div className="form-group">
+          <div className="form-group col-md-6">
             <input
               type="text"
               className="form-control"
@@ -365,9 +368,11 @@ const resetForm = () => {
               placeholder="Enter post"
               required
             />
-            {errors.post && <p className="text-danger">{errors.post}</p>}
+            {errors.post && <div style={{ color: "red" }}>{errors.post}</div>}
           </div>
-          <div className="form-group">
+          </div>
+          <div className="form-row">
+          <div className="form-group col-md-6">
             <input
               type="password"
               className="form-control mb-1"
@@ -378,9 +383,9 @@ const resetForm = () => {
               placeholder="Enter Password"
               required
             />
-            {errors.passw && <p className="text-danger">{errors.passw}</p>}
+            {errors.passw && <div style={{ color: "red" }}>{errors.passw}</div>}
           </div>
-          <div className="form-group">
+          <div className="form-group col-md-6">
             <input
               type="password"
               className="form-control"
@@ -391,18 +396,18 @@ const resetForm = () => {
               placeholder="Confirm Password"
               required
             />
-            {errors.confirmPass && (
-              <p className="text-danger">{errors.confirmPass}</p>
-            )}
+            {errors.confirmPass && <div style={{ color: "red" }}>{errors.confirmPass}</div>}
           </div>
         </div>
-        <div className="text-right mt-3">
+        <div className="form-row">
+        <div className="form-group col-md-6">
           <button type="submit" className="btn btn-primary">
             Save changes
           </button>
           <button type="button" className="btn btn-default" onClick={resetForm}>
-            Cancel
+            Reset From
           </button>
+        </div>
         </div>
       </form>
       <ToastContainer />

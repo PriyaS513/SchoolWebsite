@@ -21,13 +21,6 @@ function Carousel() {
     return () => clearInterval(intervalId);
   }, [totalImages]);
 
-  const handlePrev = () => {
-    setSelectedImage((prevSelectedImage) => (prevSelectedImage - 1 + totalImages) % totalImages);
-  };
-
-  const handleNext = () => {
-    setSelectedImage((prevSelectedImage) => (prevSelectedImage + 1) % totalImages);
-  };
 
   // const responsive = {
   //   superLargeDesktop: {
@@ -96,24 +89,6 @@ function Carousel() {
           </div>
         ))}
       </div>
-      <button
-        className="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleCaptions"
-        onClick={handlePrev}
-      >
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Previous</span>
-      </button>
-      <button
-        className="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleCaptions"
-        onClick={handleNext}
-      >
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Next</span>
-      </button>
       {/* </Carousel> */}
     </div>
   );

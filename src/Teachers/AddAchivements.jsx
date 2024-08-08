@@ -5,7 +5,7 @@ import img from "../Images/student1.jpeg";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import trophy from "../Images/trophy.png";
 function AddAchivements() {
   const navigate = useNavigate();
   const [showDropdown, setShowDropdown] = useState(false);
@@ -148,9 +148,10 @@ function AddAchivements() {
   };
 
   const resetFormPhoto = () => {
-    setImage(null);
+    setImage('');
     fileInputRef.current.value = null;
   };
+
   return (
     <div id="AddAchivements" onClick={handleOutsideClick}>
       <div className="student-info-container">
@@ -161,27 +162,18 @@ function AddAchivements() {
             <p className="student-reg-no">Teacher</p>
           </div>
           <div className="student-photo-container">
-        <img
+            <img
               src={img}
               alt="Student"
               className="student-photo"
               onClick={handlePhotoClick}
             />
             {showDropdown && (
-              <div
-                className="dropdown-menu">
+              <div className="dropdown-menu">
                 <ul>
-                  <li>
-                    <a >John Doe</a>
-                  </li>
-                  <li>
-                    <a >Reg No: 123456789</a>
-                  </li>
-                  <li>
-                    <a onClick={handleLogout}>
-                      Logout
-                    </a>
-                  </li>
+                  <li><a href="#!">John Doe</a></li>
+                  <li><a href="#!">Reg No: 123456789</a></li>
+                  <li><a href="#!" onClick={handleLogout}>Logout</a></li>
                 </ul>
               </div>
             )}
@@ -190,69 +182,58 @@ function AddAchivements() {
       </div>
       <div className="home-button-container">
         <button className="home-button" onClick={() => navigate("/Teacherprofile/Achivementpage")}>
-        <i class="fa fa-arrow-left" aria-hidden="true"></i> Back
+          <i className="fa fa-arrow-left" aria-hidden="true"></i> Back
         </button>
       </div>
       <div className="achivement">
-        <h1 style={{ textAlign: "center" }} className="heading">Add Achivements</h1>
+        <h1 className="heading-achivement">Add Achievements</h1>
         <div className="achivement-form-container">
-          <div className="left-side">
-            <img
-              src={image || "https://bootdey.com/img/Content/avatar/avatar1.png"}
-              alt="photo"
-              className="d-block ui-w-80"
-              style={{
-                width: "100px",
-                height: "100px",
-                objectFit: "cover",
-                borderRadius: "50%",
-              }}
-            />
-            <label htmlFor="file-input" className="btn btn-outline-primary">
-              Upload new photo
-              <input
-                type="file"
-                className="account-settings-fileinput"
-                id="file-input"
-                name="image"
-                onChange={handleInputChangePhoto}
-                ref={fileInputRef}
-                accept="image/*"
-                aria-label="Upload new photo"
-                required
+          <form onSubmit={handleSubmitAchivement}>
+            <div className="left-side">
+              <img
+                src={image || trophy}
+                alt="photo"
+                className="d-block ui-w-80"
               />
-            </label>
-            <button
-              type="button"
-              className="btn btn-default md-btn-flat"
-              onClick={resetFormPhoto}
-            >
-              Reset
-            </button>
-            <div className="text-light small mt-1">
-              Allowed JPG, GIF or PNG. Max size of 800K
+              <label htmlFor="file-input" className="btn btn-outline-primary">
+                Upload new photo
+                <input
+                  type="file"
+                  className="account-settings-fileinput"
+                  id="file-input"
+                  name="image"
+                  onChange={handleInputChangePhoto}
+                  ref={fileInputRef}
+                  accept="image/*"
+                  aria-label="Upload new photo"
+                  required
+                />
+              </label>
+              <button
+                type="button"
+                className="btn btn-default md-btn-flat"
+                onClick={resetFormPhoto}
+              >
+                Reset
+              </button>
+              <div className="small mt-1">
+                Allowed JPG, GIF or PNG. Max size of 800K
+              </div>
             </div>
-          </div>
-          <div className="right-side">
-            <form
-              onSubmit={handleSubmitAchivement}
-              action="achivement"
-              method="post"
-              id=""
-            >
+            <div className="right-side">
               <div className="form-group">
                 <input
                   type="text"
                   className="form-control"
                   id="achivementTitle"
                   name="title"
-                  placeholder="Enter Achivement title"
+                  placeholder="Enter Achievement title"
                   value={data.title}
                   onChange={handleInputChangeAchivement}
                   required
                 />
                 {errors.title && (
-                  <p className="text-danger">{errors.title}</p>
+                  <div style={{color: "red"}}>{errors.title}</div>
                 )}
               </div>
               <div className="form-group">
@@ -261,20 +242,22 @@ function AddAchivements() {
                   id="achivementContent"
                   name="content"
                   rows="5"
-                  placeholder="Enter Achivement content"
+                  placeholder="Enter Achievement content"
                   value={data.content}
                   onChange={handleInputChangeAchivement}
                   required
                 ></textarea>
                 {errors.content && (
-                  <p className="text-danger">{errors.content}</p>
+                  <div style={{color: "red"}}>{errors.content}</div>
                 )}
               </div>
-              <button type="submit" className="btn btn-primary submit3">
-                Submit
-              </button>
-            </form>
-          </div>
+              <div className="save">
+                <button type="submit" className="btn btn-primary submit3">
+                  Submit
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
       <ToastContainer />

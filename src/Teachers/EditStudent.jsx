@@ -229,6 +229,7 @@ const EditStudent = () => {
     setConfirmPass(state.confirmPass);
     setAdhar(state.adhar);
     setImage('');
+    setInputValue("");
     setErrors({});
     fileInputRef.current.value = "";
   };
@@ -322,7 +323,7 @@ const EditStudent = () => {
       <i class="fa fa-arrow-left" aria-hidden="true"></i> Back
 </button>
       </div>
-      <h2 className="heading">Edit Student details</h2>
+      <h2 className="heading-teac">Edit Student details</h2>
       <form onSubmit={handleSubmit} action="student" method="post" id="student-form">
         <div className="card-body media align-items-center">
           <img
@@ -358,15 +359,15 @@ const EditStudent = () => {
               >
                 Reset Photo
               </button>
-              <div className="text-light small mt-1">
+              <div className="small mt-1">
               Allowed JPG, GIF or PNG. Max size of 800K
             </div>
             </div>
           </div>
         
-          <div className="row">
-          <div className="col-md-6">
-          <div className="form-group">
+          <div className="form-row">
+          <div className="form-group col-md-4">
+          
             <label>Name:</label>
             <input
               type="text"
@@ -379,10 +380,9 @@ const EditStudent = () => {
                placeholder="Enter Name"
             />
             {errors.name && <div style={{ color: "red" }}>{errors.name}</div>}
-          </div>
+          
             </div>
-            <div className="col-md-6">
-          <div className="form-group">
+            <div className=" form-group col-md-4">
             <label>Class:</label>
             <input
               type="text"
@@ -397,12 +397,11 @@ const EditStudent = () => {
             {errors.sclass && (
                 <div style={{ color: "red" }}>{errors.sclass}</div>
               )}
+         
           </div>
-          </div>
-          </div>
-          <div className="row">
-          <div className="col-md-6">
-          <div className="form-group">
+          
+
+          <div className="form-group col-md-4">
             <label>Registration ID:</label>
             <input
               type="text"
@@ -417,10 +416,11 @@ const EditStudent = () => {
             {errors.regid && (
                 <div style={{ color: "red" }}>{errors.regid}</div>
               )}
-          </div>
-            </div>
-            <div className="col-md-6">
-          <div className="form-group">
+        </div>
+        </div>
+        <div className="form-row">
+            <div className="form-group col-md-4">
+          
             <label>Roll No:</label>
             <input
               type="text"
@@ -436,11 +436,11 @@ const EditStudent = () => {
                 <div style={{ color: "red" }}>{errors.rollNo}</div>
               )}
             </div>
-          </div>
-          </div>
-          <div className="row">
-          <div className="col-md-6">
-          <div className="form-group">
+         
+
+          
+          <div className="form-group col-md-4">
+          
             <label>Address:</label>
             <input
               type="text"
@@ -454,9 +454,9 @@ const EditStudent = () => {
             />
             {errors.add && <div style={{ color: "red" }}>{errors.add}</div>}
             </div>
-          </div>
-          <div className="col-md-6">
-          <div className="form-group">
+      
+          <div className="form-group col-md-4">
+          
             <label>Father's Name:</label>
             <input
               type="text"
@@ -472,11 +472,12 @@ const EditStudent = () => {
                 <div style={{ color: "red" }}>{errors.father}</div>
               )}
             </div>
-          </div>
-          </div>
-          <div className="row">
-          <div className="col-md-6">
-          <div className="form-group">
+         
+        </div>
+
+          <div className="form-row">
+          <div className="form-group col-md-4">
+        
             <label>Mother's Name:</label>
             <input
               type="text"
@@ -492,9 +493,11 @@ const EditStudent = () => {
                 <div style={{ color: "red" }}>{errors.mother}</div>
               )}
             </div>
-          </div>
-          <div className="col-md-6">
-          <div className="form-group">
+        
+
+         
+          <div className="form-group col-md-4">
+          
             <label>Mobile No:</label>
             <input
               type="tel"
@@ -510,11 +513,31 @@ const EditStudent = () => {
                 <div style={{ color: "red" }}>{errors.mobno}</div>
               )}
             </div>
-          </div>
-          </div>
-          <div className="row">
-          <div className="col-md-6">
-          <div className="form-group">
+
+          
+          
+            <div className="form-group col-md-4">
+          
+          <label>Aadhar No:</label>
+          <input
+            type="text"
+            className="form-control mb-1"
+              id="adhar-input"
+              name="adhar"
+              required
+            value={adhar}
+            onChange={handleInputChangeAdhar}
+            placeholder="Enter Adhar No"
+          />
+          {errors.adhar && (
+              <div style={{ color: "red" }}>{errors.adhar}</div>
+            )}
+        </div>
+
+         </div>
+         <div className="form-row">
+            <div className="form-group col-md-6">
+          
             <label>Password:</label>
             <input
               type="password"
@@ -530,9 +553,9 @@ const EditStudent = () => {
                 <div style={{ color: "red" }}>{errors.passw}</div>
               )}
             </div>
-          </div>
-          <div className="col-md-6">
-          <div className="form-group">
+            
+            <div className="form-group col-md-6">
+         
             <label>Confirm Password:</label>
             <input
               type="password"
@@ -547,69 +570,64 @@ const EditStudent = () => {
             {errors.confirmPass && (
                 <div style={{ color: "red" }}>{errors.confirmPass}</div>
               )}
-          </div>
-          <input
-              type="text"
-              placeholder="Enter Mobile Number-Student ID"
-              onChange={(e) => setInputValue(e.target.value)}
-            />
-            <input type="button" onClick={download} value="Download"></input>
             </div>
-            </div>
-    <div className="row">
-        <div className="col-md-6">
-          <div className="form-group">
-            <label>Aadhar No:</label>
-            <input
-              type="text"
-              className="form-control mb-1"
-                id="adhar-input"
-                name="adhar"
-                required
-              value={adhar}
-              onChange={handleInputChangeAdhar}
-              placeholder="Enter Adhar No"
-            />
-            {errors.adhar && (
-                <div style={{ color: "red" }}>{errors.adhar}</div>
-              )}
-              </div>
+        </div> 
+        <div className="form-row">
+          <div className="form-group col-md-4">
+            <label>Mobile Number-Student ID</label>
+              <input
+                type="text"
+                name="qrcode"
+                value={inputValue}
+                placeholder="Enter Mobile Number-Student ID"
+                onChange={(e) => setInputValue(e.target.value)}
+              />
           </div>
-          <div className="col-md-6">
-          <div className="form-group">
-          <div className="gen">
-            <div
-                  style={{
-                    height: "auto",
-                    margin: "0 auto",
-                    maxWidth: 64,
-                    width: "100%",
-                  }}
-                >
+
+          <div className="form-group col-md-4">
+        
+            <div className="gen">
+                <div
+                      style={{
+                        height: "200px",
+                      margin: "auto",
+                      maxWidth: 120,
+                      width: "100%",
+                      }}
+                    >
                     <QRCode
-                    size={256}
-                    style={{ height: "auto", maxwidth: "100%", width: "100%" }}
+                    size={250}
+                    style={{ height: "200px", maxwidth: "100%", width: "100%" }}
                     value={inputValue}
                     viewBox={`0 0 256 256`}
                     id="QRCode"
+                    includeMargin={true}
                   />
                 </div>
+            </div>
           </div>
+
+          <div className="form-group col-md-4">
+          <button type="button" style={{marginTop: "100px", maxWidth: "80"}} className="btn btn-success" onClick={download} value="Download">
+              Download QR Code
+            </button>
           </div>
-          </div>
-          <div className="row">
-            <div className="col-md-6">
+
+       </div>
+
+          <div className="form-row">
+            <div className="form-group col-md-6">
             <div className="save">
-          <button type="submit" className="btn btn-primary">
-            Update Student
-          </button>
-          <button type="button" className="btn btn-default" onClick={resetForm}>
-            Reset Form
-          </button>
+            <button type="submit" className="btn btn-primary">
+              Update Student
+            </button>
+            <button type="button" className="btn btn-default" onClick={resetForm}>
+              Reset Form
+            </button>
+            </div>
+            </div>
           </div>
-          </div>
-          </div>
-          </div>
+ 
         </form>
       </div>
     );

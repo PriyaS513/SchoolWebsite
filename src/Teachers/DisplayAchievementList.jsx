@@ -38,21 +38,22 @@ function createData(id, title, content, image) {
 }
 
 const rows = [
-  createData('S0121212', '34', 'AAAA', 'https://via.placeholder.com/50'),
-  createData('S0121212', '43', 'AAAA', 'https://via.placeholder.com/50'),
-  createData('S0121212', '35', 'AAAA', 'https://via.placeholder.com/50'),
-  createData('S0121212', '23', 'AAAA', 'https://via.placeholder.com/50'),
-  createData('S0121212', '65', 'AAAA', 'https://via.placeholder.com/50'),
-  createData('S0121212', '54', 'AAAA', 'https://via.placeholder.com/50'),
-  createData('S0121212', '45', 'AAAA', 'https://via.placeholder.com/50'),
-  createData('S0121212', '55', 'AAAA', 'https://via.placeholder.com/50'),
-  createData('S0121212', '55', 'AAAA', 'https://via.placeholder.com/50'),
-  createData('S0121212', '55', 'AAAA', 'https://via.placeholder.com/50'),
-  createData('S0121212', '55', 'AAAA', 'https://via.placeholder.com/50'),
-  createData('S0121212', '55', 'AAAA', 'https://via.placeholder.com/50'),
-  createData('S0121212', '55', 'AAAA', 'https://via.placeholder.com/50'),
-  createData('S0121212', '93', 'AAAA', 'https://via.placeholder.com/50'),
-  createData('S0121212', '1', 'AAAA', 'https://via.placeholder.com/50'),
+  createData('S0121212', 'A', 'AAAA', 'https://via.placeholder.com/50'),
+  createData('S0121212', 'B', 'AAAA', 'https://via.placeholder.com/50'),
+  createData('S0121212', 'C', 'AAAA', 'https://via.placeholder.com/50'),
+  createData('S0121212', 'D', 'AAAA', 'https://via.placeholder.com/50'),
+  createData('S0121212', 'E', 'AAAA', 'https://via.placeholder.com/50'),
+  createData('S0121212', 'F', 'AAAA', 'https://via.placeholder.com/50'),
+  createData('S0121212', 'G', 'AAAA', 'https://via.placeholder.com/50'),
+  createData('S0121212', 'H', 'AAAA', 'https://via.placeholder.com/50'),
+  createData('S0121212', 'I', 'AAAA', 'https://via.placeholder.com/50'),
+  createData('S0121212', 'J', 'AAAA', 'https://via.placeholder.com/50'),
+  createData('S0121212', 'K', 'AAAA', 'https://via.placeholder.com/50'),
+  createData('S0121212', 'L', 'AAAA', 'https://via.placeholder.com/50'),
+  createData('S0121212', 'M', 'AAAA', 'https://via.placeholder.com/50'),
+  createData('S0121212', 'N', 'AAAA', 'https://via.placeholder.com/50'),
+  createData('S0121212', 'O', 'AAAA', 'https://via.placeholder.com/50'),
+  createData('S0121212', 'P', 'AAAA', 'https://via.placeholder.com/50'),
 ];
 
 function StickyHeadTable() {

@@ -41,7 +41,7 @@ const Contact = () => {
   return (
     <div id="contact" responsive={responsive}>
       <header>
-        <h1 className="heading-contact text-center hover-effect">Contact Us</h1>
+        <h1 className="Heading-contact text-center hover-effect">Contact Us</h1>
       </header>
       <div className="containerContact" id="contact-section">
         <div className="row2">
@@ -117,9 +117,9 @@ const Contact = () => {
                     Punyashlok Ahilyadevi Holkar Madhamik Vidyalaya Ankai, Ankai
                     Tal, Yeola District, Nashik, Maharashtra, 423104
                     <br />
-                    <FontAwesomeIcon icon={faPhoneAlt} style={{ color: "blue" }} /> +91 12345 67890
+                    <FontAwesomeIcon icon={faPhoneAlt} style={{ color: "blue" }} /> +91 8755856858
                     <br />
-                    <FontAwesomeIcon icon={faEnvelope} style={{ color: "blue" }} /> school@example.com
+                    <FontAwesomeIcon icon={faEnvelope} style={{ color: "blue" }} /> pahmvankai@gmail.com
                     <br />
                     <a href="https://facebook.com">
                       <FontAwesomeIcon

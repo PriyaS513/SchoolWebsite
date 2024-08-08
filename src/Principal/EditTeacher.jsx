@@ -295,7 +295,7 @@ const handleSubmit = async (event) => {
       <i class="fa fa-arrow-left" aria-hidden="true"></i> Back
 </button>
       </div>
-      <h2 className="heading">Edit Teacher details</h2>
+      <h2 className="heading-teac">Edit Teacher details</h2>
       <form onSubmit={handleSubmit} action="student" method="post" id="student-form">
         <div className="card-body media align-items-center">
           <img
@@ -331,7 +331,7 @@ const handleSubmit = async (event) => {
               >
                 Reset Photo
               </button>
-              <div className="text-light small mt-1">
+              <div className="small mt-1">
               Allowed JPG, GIF or PNG. Max size of 800K
             </div>
             </div>
@@ -485,16 +485,16 @@ const handleSubmit = async (event) => {
             </div>
           </div>
           </div>
-          <div className="row">
-            <div className="col-md-6">
-            <div className="save">
+          <div className="form-row">
+            <div className="form-group col-md-6">
+            
           <button type="submit" className="btn btn-primary">
             Update Student
           </button>
           <button type="button" className="btn btn-default" onClick={resetForm}>
             Reset Form
           </button>
-          </div>
+          
           </div>
           </div>
         </form>
